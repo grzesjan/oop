@@ -1,23 +1,26 @@
-var iphone6S = new getWarrantyCost("Apple", "gravity", 1999);
-var samsungGalaxy = new getWarrantyCost("Samsung", "zloty", 2100);
-var onePLusOne = new getWarrantyCost("OnePlus", "srebrny", 1559);
+var iphone = new Phone("apple", "gold", 2999);
+var galaxy = new Phone("samsung", "silver", 3900);
+var zuk = new Phone("lenovo", "black", 1999);
 
 function Phone(brand, color, price) {
   this.brand = brand;
   this.color = color;
   this.price = price;  
+  //this.getWarrantyCost = 0.1 * this.price;
+  //this.getWarrantyCost = function() {
+  //  return 0.1 * this.price;
+  //}
 }
 
-function getWarrantyCost(brand, color, price, warranty) {
-  Phone.call(this, brand, color, price);
-  warranty = 0.1 * this.price;
-  this.warranty = warranty;
+Phone.prototype.getWarrantyCost = function() {
+  return 0.1 * this.price;
 }
 
-getWarrantyCost.prototype.printInfo = function() {
-  console.log(`Marka telefonu to ${this.brand}, kolor ${this.color}, kosztuje ${this.price} a przedluzenie gwarancji ${this.warranty}`);
+Phone.prototype.printInfo = function() {
+  console.log(`Marka telefonu ${this.brand}, kolor ${this.color}, cena ${this.price}, gwarancja ${this.getWarrantyCost()}`);
 }
 
-iphone6S.printInfo();
-samsungGalaxy.printInfo();
-onePLusOne.printInfo();
+iphone.printInfo();
+galaxy.printInfo();
+zuk.printInfo();
+
