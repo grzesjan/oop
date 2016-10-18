@@ -1,0 +1,61 @@
+.board {
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.board h1 {
+    text-align: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-right: 1px solid black; 
+    margin: 10px 10px;
+    padding-right: 15px;
+    align-items: center;
+}
+
+.column:last-of-type {
+    border: none;
+}
+
+.column-container {
+    display: flex; 
+    justify-content: center;
+}
+
+.column-title {
+    text-align: center;
+}
+
+.create-column {
+    width: 200px;
+    background-color: lightgrey;
+}
+
+.add-card {
+    width: 100px;
+    background-color: lightgrey;
+}
+
+.btn-delete {
+    width: 100px;
+    background-color: lightgrey;
+}
+
+.card {
+    list-style-type: decimal;
+}
+
