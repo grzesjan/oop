@@ -6,9 +6,14 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
+    
 	<div id="board" class="board">
 	  <h1>Tablica kanban</h1>
-	  <button class="create-column">Dodaj kolumnę</button>
+      <h3> Wpisz nazwę kolumny: </h3>
+      <input type="text" text="Wpisz nazwe kolumny" id="column-name" value=" ">
+      <button class="create-column">Dodaj kolumnę</button>
+      <h3> Wpisz nazwę karty i kliknij przycisk dodaj kartę: </h3>
+      <input type="text" id="card-name" value=" ">
 	  <div class="column-container"></div>
 	</div>
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
